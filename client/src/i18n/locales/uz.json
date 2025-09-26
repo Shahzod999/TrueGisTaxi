@@ -1,0 +1,84 @@
+{
+    "common": {
+      "loading": "Yuklanmoqda...",
+      "error": "Xatolik",
+      "success": "Muvaffaqiyatli"
+    },
+    "auth": {
+      "login": "Kirish",
+      "logout": "Chiqish",
+      "username": "Foydalanuvchi nomi",
+      "password": "Parol",
+      "loginError": "Noto‘g‘ri foydalanuvchi nomi yoki parol"
+    },
+    "navigation": {
+      "home": "Bosh sahifa",
+      "admin": "Admin panel"
+    },
+    "admin": {
+      "welcome": "Admin panelga xush kelibsiz"
+    },
+    "home": {
+      "welcome": "Xush kelibsiz",
+      "openMenu": "Menyuni ochish",
+      "title": "Shaharlararo taksi",
+      "subtitle": "Tez va qulay har qanday joyga",
+      "form": {
+        "from": "Qayerdan",
+        "to": "Qayerga",
+        "fromPlaceholder": "Jo'nash shahrini tanlang",
+        "toPlaceholder": "Borish shahrini tanlang",
+        "passengers": "Yo'lovchilar soni",
+        "cargo": "Yuk/pochta",
+        "cargoDescription": "Yuk tavsifi",
+        "cargoPlaceholder": "Nimani tashish kerakligini tasvirlab bering",
+        "orderButton": "Sayohatni buyurtma qilish",
+        "phone": "Telefon raqami",
+        "phonePlaceholder": "+998 __ ___ __ __",
+        "date": "Sayohat sanasi",
+        "time": "Jo'nash vaqti",
+        "select_city": "Shaharni tanlang",
+        "no_cities_available": "Mavjud shaharlar yo'q",
+        "swap_cities": "Shaharlarni almashtirish"
+      },
+      "info": {
+        "howItWorks": "Bu qanday ishlaydi",
+        "step1": "Formani to'ldiring",
+        "step1Desc": "Qayerdan va qayerga borishni ko'rsating",
+        "step2": "Biz haydovchi topamiz",
+        "step2Desc": "Mos avtomobilni tanlaymiz",
+        "step3": "Sayohat",
+        "step3Desc": "Qulay va xavfsiz sayohat"
+      }
+    },
+    "settings": {
+      "languages": "Tillar",
+      "errorGeolocation": "Geolokatsiyani olishda xatolik.",
+      "turnOnlocation": "Bosib, joylashuvni yoqing"
+    },
+    "orders": {
+      "title": "Mening buyurtmalarim",
+      "noOrders": "Sizda hali buyurtmalar yo'q",
+      "orderNumber": "Buyurtma №",
+      "status": {
+        "pending": "Kutilmoqda",
+        "confirmed": "Tasdiqlangan",
+        "inProgress": "Yo'lda",
+        "completed": "Tugallangan",
+        "cancelled": "Bekor qilingan"
+      },
+      "from": "Qayerdan",
+      "to": "Qayerga",
+      "price": "Narx",
+      "date": "Sana",
+      "driver": "Haydovchi",
+      "car": "Avtomobil",
+      "actions": {
+        "repeat": "Buyurtmani takrorlash",
+        "cancel": "Bekor qilish",
+        "contact": "Haydovchi bilan bog'lanish",
+        "rate": "Baholash"
+      }
+    }
+  }
+  

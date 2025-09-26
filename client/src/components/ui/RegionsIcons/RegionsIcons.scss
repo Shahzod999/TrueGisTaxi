@@ -1,0 +1,86 @@
+.regions-icons {
+  margin-top: 5px;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  &__item {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: fadeInScale 0.8s ease forwards;
+    opacity: 0;
+    transform: scale(0.8) rotate(-2deg);
+
+    @media (max-width: 480px) {
+      width: 40px;
+      height: 40px;
+      border-width: 2px;
+      border-radius: 10px;
+    }
+
+    // Создаем коллажный эффект с разными формами и размерами
+    &:nth-child(3n) {
+      border-radius: 50%; // Круглые
+      width: 36px;
+      height: 36px;
+
+
+    }
+
+    &:nth-child(4n) {
+      border-radius: 8px; // Более квадратные
+      width: 42px;
+      height: 34px;
+    }
+
+    &:nth-child(7n) {
+      border-radius: 50%;
+      width: 42px;
+      height: 42px;
+    }
+
+    &:hover {
+      transform: scale(1.15) rotate(0deg) !important;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      border-color: var(--primary-color, #667eea);
+      z-index: 10;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+
+    .regions-icons__item:hover & {
+      transform: scale(1.05);
+    }
+  }
+}
+
+// Анимация появления с масштабированием и поворотом
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.6) rotate(10deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(var(--rotation, -2deg));
+  }
+}

@@ -1,0 +1,68 @@
+.order-card {
+  background-color: var(--section-bg-color);
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid var(--separator-color);
+  
+  transition: all 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  &__number {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-color);
+  }
+
+  &__status {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 6px;
+    background-color: var(--section-bg-color);
+  }
+
+  &__route {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  &__route-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__route-label {
+    font-size: 12px;
+    color: var(--hint-color);
+    font-weight: 500;
+  }
+
+  &__route-address {
+    font-size: 14px;
+    color: var(--text-color);
+    font-weight: 500;
+  }
+
+  &__route-separator {
+    font-size: 16px;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin: 0 8px;
+  }
+
+ 
+}

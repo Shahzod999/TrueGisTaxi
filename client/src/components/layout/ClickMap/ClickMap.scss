@@ -1,0 +1,189 @@
+.search {
+    padding: 20px;
+    background: var(--bg-color);
+    min-height: 100vh;
+
+    .map-container {
+        position: relative;
+        background: var(--section-bg-color);
+        border-radius: 12px;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+
+        .uzbekistan-map {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+
+            path {
+                cursor: pointer;
+                transition: all 0.3s ease;
+                fill: #e0e7ff;
+                stroke: #3b82f6;
+                stroke-width: 1;
+
+                &:hover {
+                    fill: #3b82f6;
+                    stroke: #1d4ed8;
+                    stroke-width: 2;
+                    filter: drop-shadow(0 4px 8px rgba(59, 130, 246, 0.3));
+                }
+
+                &[data-city-id] {
+                    fill: #dbeafe;
+
+                    &:hover {
+                        fill: #60a5fa;
+                    }
+                }
+            }
+        }
+
+        .city-info-panel {
+            display: flex;
+            align-items: center;
+
+            background: var(--bg-color);
+            padding: 15px 20px;
+            min-width: 100%;
+            animation: fadeIn 0.3s ease-out;
+
+            h3 {
+                flex: 1;
+                color: var(--text-color);
+                font-size: 1.3rem;
+                font-weight: 600;
+                text-align: center;
+            }
+
+            .close-btn {
+                font-size: 1.1rem;
+                color: var(--hint-color);
+                cursor: pointer;
+                padding: 4px;
+                transition: all 0.2s ease;
+
+                svg {
+                    width: 22px;
+                    height: 22px;
+                }
+
+                &:hover {
+                    color: #ef4444a7;
+                }
+            }
+        }
+
+        .city-tooltip {
+            position: absolute;
+            background: #1f2937;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            pointer-events: none;
+            z-index: 1000;
+            white-space: nowrap;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transform: translate(-50%, -100%);
+            margin-top: -8px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                border: 6px solid transparent;
+                border-top-color: #1f2937;
+            }
+        }
+    }
+
+    .cities-list {
+        .cities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+
+            .city-item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: var(--section-bg-color);
+                border: 0.5px solid var(--separator-color);
+                border-radius: 8px;
+                padding: 15px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background: #eff6ff;
+                    border-color: #3b82f6;
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+                }
+
+                &.selected {
+                    background: color-mix(in srgb, var(--primary-color) 10%, transparent);
+                    border-color: #2563eb;
+                    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.3);
+                }
+
+                .city-name {
+                    font-weight: 600;
+                    color: var(--text-color);
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+
+// Анимации
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.city-info-panel,
+.city-tooltip {
+    animation: fadeIn 0.3s ease-out;
+}
+
+// Дополнительные стили для интерактивности
+.map-container {
+    &:hover {
+        .uzbekistan-map path {
+            opacity: 0.8;
+        }
+    }
+}
+
+// Стили для активного состояния городов
+.uzbekistan-map path[data-city-id].active {
+    fill: #60a5fa !important;
+    stroke: #1d4ed8;
+    stroke-width: 2;
+    filter: drop-shadow(0 4px 12px rgba(16, 185, 129, 0.4));
+}
+
+// Стили для hover состояния
+.uzbekistan-map path[data-city-id]:hover {
+    fill: #3b82f6;
+    stroke: #1d4ed8;
+    stroke-width: 2;
+    filter: drop-shadow(0 4px 12px rgba(59, 130, 246, 0.4));
+}

@@ -1,0 +1,72 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success"
+  },
+  "navigation": {
+    "home": "Home"
+  },
+  "home": {
+    "welcome": "Welcome",
+    "openMenu": "Open Menu",
+    "title": "Intercity Taxi",
+    "subtitle": "Fast and comfortable to anywhere",
+    "form": {
+      "from": "From",
+      "to": "To",
+      "fromPlaceholder": "Select departure city",
+      "toPlaceholder": "Select destination city",
+      "passengers": "Number of passengers",
+      "cargo": "Cargo/package",
+      "cargoDescription": "Cargo description",
+      "cargoPlaceholder": "Describe what needs to be transported",
+      "orderButton": "Order trip",
+      "phone": "Phone number",
+      "phonePlaceholder": "+998 __ ___ __ __",
+      "date": "Trip date",
+      "time": "Departure time",
+      "select_city": "Select city",
+      "no_cities_available": "No cities available",
+      "swap_cities": "Swap cities"
+    },
+    "info": {
+      "howItWorks": "How it works",
+      "step1": "Fill the form",
+      "step1Desc": "Specify where you need to go",
+      "step2": "We find a driver",
+      "step2Desc": "We'll select a suitable car",
+      "step3": "Trip",
+      "step3Desc": "Comfortable and safe journey"
+    }
+  },
+  "settings": {
+    "languages": "Languages",
+    "errorGeolocation": "Error obtaining geolocation.",
+    "turnOnlocation": "Click to turn on location"
+  },
+  "orders": {
+    "title": "My Orders",
+    "noOrders": "You have no orders yet",
+    "orderNumber": "Order #",
+    "status": {
+      "pending": "Pending",
+      "confirmed": "Confirmed",
+      "inProgress": "In Progress",
+      "completed": "Completed",
+      "cancelled": "Cancelled"
+    },
+    "from": "From",
+    "to": "To",
+    "price": "Price",
+    "date": "Date",
+    "driver": "Driver",
+    "car": "Car",
+    "actions": {
+      "repeat": "Repeat Order",
+      "cancel": "Cancel",
+      "contact": "Contact Driver",
+      "rate": "Rate"
+    }
+  }
+} 

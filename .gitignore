@@ -1,0 +1,36 @@
+# Секретные файлы
+.env
+.env.local
+.env.production
+.env.staging
+
+# Логи
+*.log
+logs/
+
+# Временные файлы
+*.tmp
+*.temp
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+
+# Зависимости
+node_modules/
+
+# Сборка
+dist/
+build/
+
+# Загруженные файлы (если нужно)
+uploads/
+
+# IDE файлы
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Docker
+docker-compose.override.yml

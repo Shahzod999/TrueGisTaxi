@@ -1,0 +1,28 @@
+services:
+  app:
+    build: .
+    ports:
+      - "2999:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - MONGO_URL=mongodb://db:27017/truegis_taxi
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - WEB_APP_URL=${WEB_APP_URL}
+    depends_on:
+      - db
+    restart: unless-stopped
+    volumes:
+      - uploads:/app/uploads
+
+  db:
+    image: mongo:6.0
+    volumes:
+      - mongodb_data:/data/db
+    restart: unless-stopped
+    environment:
+      - MONGO_INITDB_DATABASE=truegis_taxi
+
+volumes:
+  mongodb_data:
+  uploads:

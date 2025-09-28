@@ -28,15 +28,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Раздача статических файлов из client/dist
-const clientDistPath = path.resolve(process.cwd(), "client/dist");
-app.use(express.static(clientDistPath));
+// const clientDistPath = path.resolve(process.cwd(), "client/dist");
+// app.use(express.static(clientDistPath));
 
 // API маршруты
 app.get("/api/health", (req, res) => {
-  res.status(200).json({ 
-    status: "ok", 
-    message: "Server is running", 
-    timestamp: new Date().toISOString() 
+  res.status(200).json({
+    status: "ok",
+    message: "Server is running",
+    timestamp: new Date().toISOString(),
   });
 });
 
@@ -79,12 +79,12 @@ bot.on("message", async (msg) => {
 
 // SPA маршрутизация - все неизвестные маршруты отправляем на index.html
 app.get("*", (req, res) => {
-  res.sendFile(path.join(clientDistPath, "index.html"));
+  res.send("Hello World");
 });
 
 // Запуск сервера
 app.listen(port, "0.0.0.0", () => {
   console.log(`🚀 Server is running on port ${port}`);
   console.log(`📱 Telegram Bot is active`);
-  console.log(`📁 Static files served from: ${clientDistPath}`);
+  // console.log(`📁 Static files served from: ${clientDistPath}`);
 });

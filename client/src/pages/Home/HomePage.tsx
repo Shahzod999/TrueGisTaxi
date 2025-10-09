@@ -5,6 +5,8 @@ import CitySelector from "../../components/ui/CitySelector";
 import DateTimeSelector from "../../components/ui/DateTimeSelector";
 import RegionsIcons from "../../components/ui/RegionsIcons";
 import "./HomePage.scss";
+import { succesToast } from "../../store/slices/Toast/toastSlice";
+import { useAppDispatch } from "../../hooks/redux";
 
 interface OrderForm {
   from: string;
@@ -19,6 +21,7 @@ interface OrderForm {
 
 const HomePage = () => {
   const { t } = useTranslation();
+  const dispatch = useAppDispatch();
   const [formData, setFormData] = useState<OrderForm>({
     from: "",
     to: "",
@@ -42,6 +45,7 @@ const HomePage = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Order submitted:", formData);
+    dispatch(succesToast("Заказ успешно отправлен"));
     // Здесь будет отправка заказа
   };
 

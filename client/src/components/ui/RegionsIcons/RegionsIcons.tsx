@@ -14,18 +14,18 @@ interface RegionsIconsProps {
 const RegionsIcons: React.FC<RegionsIconsProps> = ({ className = "" }) => {
   const regions: RegionIcon[] = [
     { id: "toshkent", name: "Тошкент", image: "/uz/toshkent.jpeg" },
-    { id: "samarqand", name: "Самарқанд", image: "/uz/samarqand.jpg" },
-    { id: "buhoro", name: "Бухоро", image: "/uz/buhoro.jpg" },
-    { id: "andijon", name: "Андижон", image: "/uz/andijon.jpg" },
-    { id: "fargona", name: "Фарғона", image: "/uz/fargona.jpg" },
-    { id: "namangan", name: "Наманган", image: "/uz/namangan.jpg" },
-    { id: "qashqadaryo", name: "Қашқадарё", image: "/uz/qashqadaryo.jpg" },
-    { id: "surhandaryo", name: "Сурхондарё", image: "/uz/surhandaryo.png" },
-    { id: "jizzah", name: "Жиззах", image: "/uz/jizzah.jpg" },
-    { id: "sirdaryo", name: "Сирдарё", image: "/uz/sirdaryo.jpg" },
-    { id: "navoiy", name: "Навоий", image: "/uz/navoiy.jpg" },
-    { id: "xorazm", name: "Хоразм", image: "/uz/xorazm.jpg" },
-    { id: "qoraqolpogiston", name: "Қорақалпоғистон", image: "/uz/Qoraqolpoaiston.jpg" },
+    { id: "samarqand", name: "Самарқанд", image: "/uz/samarqand.jpeg" },
+    { id: "buhoro", name: "Бухоро", image: "/uz/buhoro.jpeg" },
+    { id: "andijon", name: "Андижон", image: "/uz/andijon.jpeg" },
+    { id: "fargona", name: "Фарғона", image: "/uz/fargona.jpeg" },
+    { id: "namangan", name: "Наманган", image: "/uz/namangan.jpeg" },
+    { id: "qashqadaryo", name: "Қашқадарё", image: "/uz/qashqadaryo.jpeg" },
+    { id: "surhandaryo", name: "Сурхондарё", image: "/uz/surhandaryo.jpeg" },
+    { id: "jizzah", name: "Жиззах", image: "/uz/jizzah.jpeg" },
+    { id: "sirdaryo", name: "Сирдарё", image: "/uz/sirdaryo.jpeg" },
+    { id: "navoiy", name: "Навоий", image: "/uz/navoiy.jpeg" },
+    { id: "xorazm", name: "Хоразм", image: "/uz/xorazm.jpeg" },
+    { id: "qoraqolpogiston", name: "Қорақалпоғистон", image: "/uz/Qoraqolpoaiston.jpeg" },
   ];
 
   // Массивы для коллажного эффекта

@@ -1,28 +1,38 @@
+version: "3.8"
+
 services:
-  app:
-    build: .
-    ports:
-      - "2999:3000"
+  server:
+    build:
+      context: ./SERVER
+      dockerfile: Dockerfile
     environment:
       - NODE_ENV=production
       - PORT=3000
-      - MONGO_URL=mongodb://db:27017/truegis_taxi
+      - MONGO_URL=mongodb://mongodb:27017/truegis_taxi
       - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
       - WEB_APP_URL=${WEB_APP_URL}
     depends_on:
-      - db
+      - mongodb
     restart: unless-stopped
+    ports:
+      - 3004:3000
+    networks:
+      - app-network
     volumes:
-      - uploads:/app/uploads
-
-  db:
-    image: mongo:6.0
+      - ./SERVER/uploads:/app/uploads
+  mongodb:
+    image: mongo:latest
     volumes:
-      - mongodb_data:/data/db
+      - ./mongodb_data:/data/db
     restart: unless-stopped
+    networks:
+      - app-network
     environment:
       - MONGO_INITDB_DATABASE=truegis_taxi
 
+networks:
+  app-network:
+    driver: bridge
+
 volumes:
   mongodb_data:
-  uploads:

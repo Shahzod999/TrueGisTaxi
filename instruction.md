@@ -6,6 +6,12 @@ root
 
 cd /opt/projects/TrugisTaxi
 
+
+client
+
+npm i
+npm run build
+
 # 2. Остановите текущие контейнеры
 
 docker-compose down

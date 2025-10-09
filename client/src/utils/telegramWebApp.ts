@@ -2,7 +2,7 @@
 
 import OrientationLock from "./OrientationLock";
 import { hapticVibration } from "./hapticFeedback";
-import eruda from "eruda";
+// import eruda from "eruda";
 
 export const tg = window.Telegram?.WebApp;
 
@@ -18,7 +18,7 @@ export const initTelegramWebApp = () => {
 
   // Разворачиваем приложение на весь экран
   tg.expand();
-  eruda.init();
+  // eruda.init();
 
   // Инициализация блокировки ориентации
   const orientation = OrientationLock();
@@ -29,10 +29,7 @@ export const initTelegramWebApp = () => {
   const currentVersion = tg.version;
 
   // Применяем дополнительные настройки для современных версий приложения
-  if (
-    currentVersion >= requiredVersion &&
-    (tg.platform === "ios" || tg.platform === "android")
-  ) {
+  if (currentVersion >= requiredVersion && (tg.platform === "ios" || tg.platform === "android")) {
     // Отключаем вертикальные свайпы
     if (typeof (tg as any).disableVerticalSwipes === "function") {
       (tg as any).disableVerticalSwipes();

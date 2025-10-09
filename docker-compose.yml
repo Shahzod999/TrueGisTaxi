@@ -3,7 +3,7 @@ version: "3.8"
 services:
   server:
     build:
-      context: ./SERVER
+      context: ./server
       dockerfile: Dockerfile
     environment:
       - NODE_ENV=production
@@ -19,7 +19,7 @@ services:
     networks:
       - app-network
     volumes:
-      - ./SERVER/uploads:/app/uploads
+      - ./server/uploads:/app/uploads
   mongodb:
     image: mongo:latest
     volumes:

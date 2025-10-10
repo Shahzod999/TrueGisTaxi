@@ -17,7 +17,7 @@ export const initTelegramWebApp = () => {
   tg.ready();
 
   // Разворачиваем приложение на весь экран
-  tg.expand();
+  // tg.expand();
   // eruda.init();
 
   // Инициализация блокировки ориентации
